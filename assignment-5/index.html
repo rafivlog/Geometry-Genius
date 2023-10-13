@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geometry Resources</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Inter&family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles/styles.css">
+
+</head>
+<body>
+    <header class="mx-12">
+      <!-- navbar section -->
+      <div class="navbar bg-sky-100 px-12 mt-5 rounded-lg">
+        <div class="flex-1">
+          <h3 class="text-primary"><span class="text-3xl font-bold text-black">Interactive</span><br><span class="text-2xl font-medium text-slate-500">Geometry Genius</span></h3>
+          
+        </div>
+        <div class="flex-none gap-2">
+            <a href="blog.html"><button class="text-white bg-sky-500 px-6 py-1 rounded-lg">Blog</button></a> 
+        </div>
+      </div>
+    </header>
+    <main>
+        <section class="md:mx-12 mt-5 flex flex-col md:flex-row">
+            <div class="mx-0 sm:mx-auto md:w-[60%] lg:w-[70%] grid md:grid-cols-2 lg:grid-cols-3 gap-2">
+              <!-- first card --> 
+              <div id="first" class="card w-full bg-base-100 border-solid border-2 border-slate-100">
+                    <figure class="px-10 pt-10">
+                      <img src="images/triangle.png" alt="Shoes" class="h-48" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="triangle" class="card-title">Triangle</h2>
+                      <p>Area (A) = 0.5 X b X h</p>
+                      <div class="flex w-[75%]">
+                        <input id="breadth-triangle" class="w-[25%] bg-slate-200 px-2" type="text" placeholder="b">
+                        <p>cm</p>
+                        <input id="height-triangle" class="w-[25%] bg-slate-200 px-2" type="text" placeholder="h">
+                        <p>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-first" class="mt-4 px-20 py-2 text-center bg-sky-500 rounded-lg text-primary text-white">Calculate</button>
+                      </div>
+                    </div>
+              </div>
+              <!-- second card -->
+              <div id="second" class="card w-full bg-base-100 border-solid border-2 border-slate-100">
+                    <figure class="px-10 pt-10">
+                      <img src="images/rectangle.png" alt="Shoes" class="h-48" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="rectangle" class="card-title">Rectangle</h2>
+                      <p>Area (A) = w X l</p>
+                      <div class="flex w-[75%]">
+                        <input id="rectangle-width" class="w-[25%] bg-slate-200 px-2" type="text" placeholder="w">
+                        <p>cm</p>
+                        <input id="rectangle-length" class="w-[25%] bg-slate-200 px-2" type="text" placeholder="l">
+                        <p>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-second" class="mt-4 px-20 py-2 text-center bg-sky-500 rounded-lg text-primary text-white">Calculate</button>
+                      </div>
+                    </div>
+              </div>
+              <!-- third card -->
+              <div id="third" class="card w-full bg-base-100 border-solid border-2 border-slate-100">
+                    <figure class="px-10 pt-10">
+                      <img src="images/parallelogram.png" alt="Shoes" class="h-48" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="parallelogram" class="card-title">Parallelogram</h2>
+                      <p>Area (A) = b X h</p>
+                      <div class="w-[75%]">
+                        <p class="text-lg">b=<span id="parallelogram-breadth">10</span>cm, h=<span id="parallelogram-height">12</span>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-third" class="mt-4 px-20 py-2 text-center bg-sky-500 rounded-lg text-primary text-white">Calculate</button>
+                      </div>
+                    </div>
+              </div>
+              <!-- fourth card -->
+              <div id="fourth" class="card w-full bg-base-100 border-solid border-2 border-slate-100">
+                    <figure class="px-10 pt-10">
+                      <img src="images/rhombus.png" alt="Shoes" class="h-48" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="rhombus" class="card-title">Rhombus</h2>
+                      <p>Area (A) = 0.5 X d1 X d2</p>
+                      <div class="w-[75%]">
+                        <p class="text-lg">d1=<span id="rhombus-diagonal1">16</span>cm, d2=<span id="rhombus-diagonal2">8</span>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-fourth" class="mt-4 px-20 py-2 text-center bg-sky-500 rounded-lg text-primary text-white">Calculate</button>
+                      </div>
+                    </div>
+              </div>
+              <!-- fifth card -->
+              <div id="fifth" class="card w-full bg-base-100 border-solid border-2 border-slate-100">
+                    <figure class="px-10 pt-10">
+                      <img src="images/pentagon.png" alt="Shoes" class="h-48" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="pentagon" class="card-title">Pentagon</h2>
+                      <p>Area (A) = 0.5 X p X b</p>
+                      <div class="w-[75%]">
+                        <p class="text-lg">p=<span id="pentagon-perimeter">6</span>cm, b=<span id="pentagon-apothem">10</span>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-fifth" class="mt-4 px-20 py-2 text-center bg-sky-500 rounded-lg text-primary text-white">Calculate</button>
+                      </div>
+                    </div>
+              </div>
+              <!-- sixth card -->
+              <div id="sixth" class="card w-full bg-base-100 border-solid border-2 border-slate-100">
+                    <figure class="px-10 pt-10">
+                      <img src="images/ellipse.png" alt="Shoes" class="h-48" />
+                    </figure>
+                    <div class="card-body items-center text-center">
+                      <h2 id="ellipse" class="card-title">Ellipse</h2>
+                      <p>Area (A) = <span class="text-lg">π</span>ab</p>
+                      <div class="w-[75%]">
+                        <p class="text-lg">a=<span id="ellipse-a-axis">10</span>cm, b=<span id="ellipse-b-axis">4</span>cm</p>
+                      </div>
+                      <div class="card-actions">
+                        <button id="btn-sixth" class="mt-4 px-20 py-2 text-center bg-sky-500 rounded-lg text-primary text-white">Calculate</button>
+                      </div>
+                    </div>
+              </div>
+            </div>
+            <!-- area calculation class -->
+            <div class="mx-0 sm:mx-auto  md:w-[40%] lg:w-[30%]  border-solid border-2 border-slate-100 h-fit rounded lg:ml-10 mb-5">
+                <h1 class="text-lg text-center font-bold underline mt-5">
+                    Area Calculation
+                  </h1>
+                  <div class="overflow-x-auto">
+                    <table class="table  w-full">
+                      <tbody id="table-container">
+                        
+                      </tbody>
+                    </table>
+                  </div>
+            </div>
+        </section>
+
+        <!-- JS files added here -->
+        <script src="js/color.js"></script>
+        <script src="js/calculate.js"></script>
+    </main>
+</body>
+</html>
+<!-- https://lighthearted-hummingbird-9efcd7.netlify.app/ -->
+
